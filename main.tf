@@ -5,6 +5,11 @@ terraform {
   }
 }
 
+resource "kubernetes_namespace" "namespace" {
+  metadata {
+    name = var.monitoring_name_space
+  }
+}
 
 data "helm_repository" "stable" {
   #https://www.terraform.io/docs/providers/helm/d/repository.html
