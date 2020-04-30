@@ -36,7 +36,7 @@ provider "helm" {
 
 module "monitoring-cluster" {
   source  = "Mtt6300/monitoring-cluster/kubernetes"
-  version = "0.3.5"
+  version = "1.0.0"
   storage_class_name = "managed-nfs-storage" # your storageclass
   monitoring_name_space = "kube-monitor"
 }
