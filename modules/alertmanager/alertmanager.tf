@@ -94,8 +94,8 @@ resource "kubernetes_service" "service" {
     namespace = var.monitoring_name_space
     annotations = {
       "prometheus.io/scrape" = "true"
-      "prometheus.io/path"=   "/"
-      "prometheus.io/port" = "8080"
+      "prometheus.io/path"=   "/metrics"
+      "prometheus.io/port" = "9093"
     }
 
   }

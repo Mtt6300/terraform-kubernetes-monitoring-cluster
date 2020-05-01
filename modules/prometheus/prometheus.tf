@@ -69,6 +69,10 @@ resource "kubernetes_deployment" "deployment" {
             claim_name = "ptometheus-pvc"
           }
         }
+
+        security_context {
+          fs_group = "472"
+        }
         automount_service_account_token = true
       # node_selector = {
       #   type = "master"

@@ -86,6 +86,9 @@ resource "kubernetes_deployment" "deployment" {
       # node_selector = {
       #   type = "master"
       # }
+      security_context {
+        fs_group = "472"
+      }
 
       }
     }
